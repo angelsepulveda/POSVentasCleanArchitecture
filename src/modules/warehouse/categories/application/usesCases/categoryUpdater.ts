@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify';
 
 import { CategoryRepository } from '../../domain/category.repository';
 import { CategoryUpdate } from '../../domain/types/categoryUpdate.type';
-import { CategoryDescription } from '../../domain/value-objects/CategoryDescription.vo';
+import { CategoryDescription } from '../../domain/value-objects/categoryDescription.vo';
 import { CategoryId } from '../../domain/value-objects/categoryId.vo';
 import { CategoryUpdaterDTO, CategoryUpdaterMapping } from '../dto/response/categoryUpdater.dto';
 import { CategoryName } from './../../domain/value-objects/categoryName.vo';

@@ -3,7 +3,7 @@ import { CategoryPrimitive } from './types/categoryPrimitive.type';
 import { CategoryProperties } from './types/categoryProperties.type';
 import { CategoryUpdate } from './types/categoryUpdate.type';
 import { CategoryActive } from './value-objects/categoryActive.vo';
-import { CategoryDescription } from './value-objects/CategoryDescription.vo';
+import { CategoryDescription } from './value-objects/categoryDescription.vo';
 import { CategoryId } from './value-objects/categoryId.vo';
 import { CategoryName } from './value-objects/categoryName.vo';
 

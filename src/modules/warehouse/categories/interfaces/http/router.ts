@@ -7,6 +7,7 @@ import CategoryFinderController from './controllers/categoryFinder.controller';
 import CategoryListerController from './controllers/categoryLister.controller';
 import CategoryUpdaterController from './controllers/categoryUpdater.controller';
 import { MiddlewareListOne } from './middlewares/category.middleware';
+import { CategoryMiddlewareError } from './middlewares/categoryException.middleware';
 
 
 class CategoryRouter {
@@ -15,6 +16,7 @@ class CategoryRouter {
    constructor(){
       this.expressRouter = Router();
       this.mountRoutes();
+      this.mountMiddlewares();
    }
 
    mountRoutes(): void {
@@ -146,6 +148,10 @@ class CategoryRouter {
        *         description: Categoría no encontrada
        */
       this.expressRouter.delete('/:id', deleterController.run.bind(deleterController));
+   }
+
+   mountMiddlewares(): void {
+      this.expressRouter.use(CategoryMiddlewareError);
    }
 }
 

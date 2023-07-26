@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Category from './category';
 import { CategoryProperties } from './types/categoryProperties.type';
 import { CategoryActive } from './value-objects/categoryActive.vo';
-import { CategoryDescription } from './value-objects/CategoryDescription.vo';
+import { CategoryDescription } from './value-objects/categoryDescription.vo';
 import { CategoryId } from './value-objects/categoryId.vo';
 import { CategoryName } from './value-objects/categoryName.vo';
 

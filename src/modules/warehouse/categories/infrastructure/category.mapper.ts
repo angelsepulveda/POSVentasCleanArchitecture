@@ -1,6 +1,6 @@
 import Category from '../domain/category';
 import { CategoryActive } from '../domain/value-objects/categoryActive.vo';
-import { CategoryDescription } from '../domain/value-objects/CategoryDescription.vo';
+import { CategoryDescription } from '../domain/value-objects/categoryDescription.vo';
 import { CategoryId } from '../domain/value-objects/categoryId.vo';
 import { CategoryName } from './../domain/value-objects/categoryName.vo';
 import { CategoryEntity } from './category.entity';

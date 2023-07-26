@@ -1,4 +1,4 @@
-import { CategoryDescription } from '../value-objects/CategoryDescription.vo';
+import { CategoryDescription } from '../value-objects/categoryDescription.vo';
 import { CategoryName } from '../value-objects/categoryName.vo';
 
 export type CategoryUpdate = {
