@@ -1,0 +1,1 @@
+{"version":3,"file":"domain.exception.js","sourceRoot":"","sources":["../../../../../src/modules/shared/domain/exceptions/domain.exception.ts"],"names":[],"mappings":";;;AAAA,wEAAoE;AAEpE,MAAsB,eAAgB,SAAQ,KAAK;IAChD,YAAY,OAAgB;QACzB,KAAK,CAAC,OAAO,CAAC,CAAC;QACf,IAAI,CAAC,IAAI,GAAG,0CAAmB,CAAC,wBAAwB,CAAC;IAC5D,CAAC;CACH;AALD,0CAKC"}

@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
+const app_1 = __importDefault(require("./app"));
+const database_bootstrap_1 = __importDefault(require("./bootstrap/database.bootstrap"));
+const server_bootstrap_1 = __importDefault(require("./bootstrap/server.bootstrap"));
+const serverBootstrap = new server_bootstrap_1.default(app_1.default);
+const databaseBootstrap = new database_bootstrap_1.default();
+(async () => {
+    try {
+        await databaseBootstrap.initialize(), console.log('Database started successfully');
+        await serverBootstrap.initialize();
+    }
+    catch (error) {
+        console.log(error);
+    }
+})();
+//# sourceMappingURL=index.js.map

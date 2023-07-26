@@ -1,0 +1,21 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint","simple-import-sort"],
+	"extends": [
+		 "eslint:recommended",
+		 "plugin:@typescript-eslint/eslint-recommended",
+		 "plugin:@typescript-eslint/recommended"
+	],
+	"rules": {
+		 "quotes": ["error", "single"],
+		 "@typescript-eslint/no-explicit-any": ["warn"],
+		 "curly": "error",
+		 "no-empty": "error",
+		 "@typescript-eslint/no-var-requires": "off",
+		 "no-undef": "off",
+       "simple-import-sort/imports": "error",
+       "simple-import-sort/exports": "error",
+       "semi": "error"
+	}
+}
