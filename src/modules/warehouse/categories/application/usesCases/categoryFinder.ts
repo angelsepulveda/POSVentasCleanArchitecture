@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 
-import { CategoryRepository } from '../../domain/category.repository';
+import { CategoryRepository } from '../../domain/categoryRepository';
 import { CategoryId } from '../../domain/value-objects/categoryId.vo';
 import { CategoryFinderDTO, CategoryFinderMapping } from '../dto/response/categoryFinder.dto';
 

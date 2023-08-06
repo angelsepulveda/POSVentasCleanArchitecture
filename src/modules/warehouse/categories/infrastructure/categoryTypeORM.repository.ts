@@ -2,7 +2,7 @@ import { injectable } from 'inversify';
 
 import DatabaseBootstrap from '../../../../bootstrap/database.bootstrap';
 import Category from '../domain/category';
-import { CategoryRepository } from '../domain/category.repository';
+import { CategoryRepository } from '../domain/categoryRepository';
 import { CategoryNotFoundException } from '../domain/exceptions/category.exception';
 import { CategoryUpdate } from '../domain/types/categoryUpdate.type';
 import { CategoryId } from './../domain/value-objects/categoryId.vo';
@@ -19,7 +19,7 @@ export default class CategoryTypeORMRepository implements CategoryRepository {
 
    async listOne (id: CategoryId): Promise<Category> {
       const repo = DatabaseBootstrap.dataSource.getRepository(CategoryEntity);
-      const result = await repo.findOne({ where: { guid: id.getValue() } });
+      const result = await repo.findOne({ where: { guid: id.value } });
       if (!result) {
          throw new CategoryNotFoundException();
       }
@@ -46,7 +46,7 @@ export default class CategoryTypeORMRepository implements CategoryRepository {
    }
    async update (id: CategoryId, category: Partial<CategoryUpdate>): Promise<Category> {
       const repo = DatabaseBootstrap.dataSource.getRepository(CategoryEntity);
-      const categoryFound = await repo.findOne({ where: { guid: id.getValue() } });
+      const categoryFound = await repo.findOne({ where: { guid: id.value } });
 
       if (!categoryFound) {
          throw new CategoryNotFoundException();
@@ -63,7 +63,7 @@ export default class CategoryTypeORMRepository implements CategoryRepository {
    async delete (id: CategoryId): Promise<Category> {
       const repo = DatabaseBootstrap.dataSource.getRepository(CategoryEntity);
       const categoryFound = await repo.findOne({
-         where: { guid: id.getValue() },
+         where: { guid: id.value },
       });
 
       if (!categoryFound) {

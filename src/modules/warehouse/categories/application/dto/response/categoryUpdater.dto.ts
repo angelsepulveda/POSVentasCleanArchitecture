@@ -12,9 +12,9 @@ export type CategoryUpdaterDTO = CategoryDTO
 export class CategoryUpdaterMapping extends DTO<CategoryProperties, CategoryUpdaterDTO> {
    execute(data: CategoryProperties): CategoryUpdaterDTO {
       return {
-         name: data.name.getValue(),
-         description: data.description.getValue(),
-         id: data.id.getValue(),
+         name: data.name.value,
+         description: data.description.value,
+         id: data.id.value,
       };
    }
 }

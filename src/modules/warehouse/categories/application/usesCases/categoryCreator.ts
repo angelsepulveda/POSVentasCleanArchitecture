@@ -1,7 +1,7 @@
 import { inject, injectable } from 'inversify';
 
-import { CategoryRepository } from '../../domain/category.repository';
 import CategoryFactory from '../../domain/categoryFactory';
+import { CategoryRepository } from '../../domain/categoryRepository';
 import { CategoryCreatorMapping } from '../dto/response/categoryCreator.dto';
 
 interface CategoryInput {

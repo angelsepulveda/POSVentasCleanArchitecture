@@ -5,7 +5,7 @@ import CategoryDeleter from '../application/usesCases/categoryDeleter';
 import CategoryFinder from '../application/usesCases/categoryFinder';
 import CategoryLister from '../application/usesCases/categoryLister';
 import CategoryUpdater from '../application/usesCases/categoryUpdater';
-import { CategoryRepository } from '../domain/category.repository';
+import { CategoryRepository } from '../domain/categoryRepository';
 import CategoryCreatorController from '../interfaces/http/controllers/categoryCreator.controller';
 import CategoryDeleterController from '../interfaces/http/controllers/categoryDeleter.controller';
 import CategoryFinderController from '../interfaces/http/controllers/categoryFinder.controller';

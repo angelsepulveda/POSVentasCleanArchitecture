@@ -1,5 +1,5 @@
 import { IEntity } from '../../../shared/domain/interfaces/entity.interface';
-import { CategoryPrimitive } from './types/categoryPrimitive.type';
+import { CategoryPrimitive } from './types/CategoryPrimitive.type';
 import { CategoryProperties } from './types/categoryProperties.type';
 import { CategoryUpdate } from './types/categoryUpdate.type';
 import { CategoryActive } from './value-objects/categoryActive.vo';
@@ -20,10 +20,10 @@ export default class Category implements IEntity<CategoryProperties,CategoryUpda
 
    toPrimitives(): CategoryPrimitive {
       return {
-         id: this.id.getValue(),
-         name: this.name.getValue(),
-         description: this.description.getValue(),
-         active: this.active.getValue()
+         id: this.id.value,
+         name: this.name.value,
+         description: this.description.value,
+         active: this.active.value
       };
    }
 

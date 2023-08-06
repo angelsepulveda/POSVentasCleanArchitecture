@@ -7,7 +7,7 @@ import {
    CategoryNameRequiredException } from '../exceptions/category.exception';
 
 export type CategoryResult = Result<
-   Category,
+      Category,
    | CategoryNameRequiredException
    | CategoryNameLengthInvalidException
    | CategoryDescriptionLengthInvalidException

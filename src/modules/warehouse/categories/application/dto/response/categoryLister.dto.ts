@@ -13,9 +13,9 @@ export class CategoryListerMapping extends DTO<CategoryProperties[], CategoryLis
    execute(data: CategoryProperties[]): CategoryListerDTO {
       return data.map((category: CategoryProperties) => {
          return {
-            name: category.name.getValue(),
-            description: category.description.getValue(),
-            id: category.id.getValue(),
+            name: category.name.value,
+            description: category.description.value,
+            id: category.id.value,
          };
       });
    }

@@ -12,9 +12,9 @@ export type CategoryDeleterDTO = CategoryDTO
 export class CategoryDeleterMapping extends DTO<CategoryProperties, CategoryDeleterDTO> {
    execute(data: CategoryProperties): CategoryDeleterDTO {
       return {
-         name: data.name.getValue(),
-         description: data.description.getValue(),
-         id: data.id.getValue(),
+         name: data.name.value,
+         description: data.description.value,
+         id: data.id.value,
       };
    }
 }

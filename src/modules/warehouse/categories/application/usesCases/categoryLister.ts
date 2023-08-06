@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 
-import { CategoryRepository } from '../../domain/category.repository';
+import { CategoryRepository } from '../../domain/categoryRepository';
 import { CategoryListerDTO, CategoryListerMapping } from '../dto/response/categoryLister.dto';
 
 @injectable()

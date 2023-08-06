@@ -1,6 +1,7 @@
-import { GuidVO } from '../../../../shared/domain/value-objects/guid.vo';
+import { Uuid } from '../../../../shared/domain/value-objects/uuid.vo';
 
-export class CategoryId extends GuidVO {
+
+export class CategoryId extends Uuid {
   constructor(value: string) {
       super(value);
    }

@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 
-import { CategoryRepository } from '../../domain/category.repository';
+import { CategoryRepository } from '../../domain/categoryRepository';
 import { CategoryUpdate } from '../../domain/types/categoryUpdate.type';
 import { CategoryDescription } from '../../domain/value-objects/categoryDescription.vo';
 import { CategoryId } from '../../domain/value-objects/categoryId.vo';

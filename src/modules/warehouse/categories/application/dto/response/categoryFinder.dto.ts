@@ -12,9 +12,9 @@ export type CategoryFinderDTO = CategoryDTO
 export class CategoryFinderMapping extends DTO<CategoryProperties, CategoryFinderDTO> {
    execute(data: CategoryProperties): CategoryFinderDTO {
       return {
-         name: data.name.getValue(),
-         description: data.description.getValue(),
-         id: data.id.getValue(),
+         name: data.name.value,
+         description: data.description.value,
+         id: data.id.value,
       };
    }
 }

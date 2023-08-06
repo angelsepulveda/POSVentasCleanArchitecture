@@ -12,9 +12,9 @@ export type CategoryCreatorDTO = CategoryDTO
 export class CategoryCreatorMapping extends DTO<CategoryProperties, CategoryCreatorDTO> {
    execute(data: CategoryProperties): CategoryCreatorDTO {
       return {
-         name: data.name.getValue(),
-         description: data.description.getValue(),
-         id: data.id.getValue(),
+         name: data.name.value,
+         description: data.description.value,
+         id: data.id.value,
       };
    }
 }
