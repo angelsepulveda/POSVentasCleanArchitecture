@@ -1,9 +1,11 @@
+import { Optional } from 'src/modules/shared/domain/types/optional.type';
+
 import { DTO } from '../../../../../../shared/interfaces/dto.interface';
 import { CategoryProperties } from '../../../../domain/types/categoryProperties.type';
 
 interface CategoryDTO {
    name: string
-   description: string
+   description: Optional<string>
    id: string
 }
 
@@ -13,8 +15,8 @@ export class CategoryListMapping extends DTO<CategoryProperties[], CategoryListD
    execute(data: CategoryProperties[]): CategoryListDTO {
       return data.map((category: CategoryProperties) => {
          return {
-            name: category.name,
-            description: category.description,
+            name: category.name.value,
+            description: category.description.value,
             id: category.id.value,
          };
       });

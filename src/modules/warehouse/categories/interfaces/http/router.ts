@@ -6,8 +6,8 @@ import CategoryDeleterController from './controllers/categoryDeleter.controller'
 import CategoryFinderController from './controllers/categoryFinder.controller';
 import CategoryListerController from './controllers/categoryLister.controller';
 import CategoryUpdaterController from './controllers/categoryUpdater.controller';
-import { MiddlewareListOne } from './middlewares/category.middleware';
 import { CategoryMiddlewareError } from './middlewares/categoryException.middleware';
+import { MiddlewareCreator, MiddlewareListOne, MiddlewareUpdater } from './middlewares/categoryValidator.middleware';
 
 
 class CategoryRouter {
@@ -67,7 +67,7 @@ class CategoryRouter {
        *         required: true
        *         description: ID de la categoría
        *         schema:
-       *           type: integer
+       *           type: string
        *     responses:
        *       200:
        *         description: Detalles de la categoría
@@ -97,7 +97,7 @@ class CategoryRouter {
        *       201:
        *         description: Categoría creada exitosamente
        */
-      this.expressRouter.post('/',  creatorController.run.bind(creatorController));
+      this.expressRouter.post('/',...MiddlewareCreator,  creatorController.run.bind(creatorController));
       /**
        * @swagger
        * /api/categories/{id}:
@@ -110,7 +110,7 @@ class CategoryRouter {
        *         required: true
        *         description: ID de la categoría
        *         schema:
-       *           type: integer
+       *           type: string
        *     requestBody:
        *       content:
        *         application/json:
@@ -127,7 +127,7 @@ class CategoryRouter {
        *       404:
        *         description: Categoría no encontrada
        */
-      this.expressRouter.put('/:id', updaterController.run.bind(updaterController));
+      this.expressRouter.put('/:id',...MiddlewareUpdater, updaterController.run.bind(updaterController));
       /**
        * @swagger
        * /api/categories/{id}:
@@ -140,7 +140,7 @@ class CategoryRouter {
        *         required: true
        *         description: ID de la categoría
        *         schema:
-       *           type: integer
+       *           type: string
        *     responses:
        *       200:
        *         description: Categoría eliminada exitosamente
