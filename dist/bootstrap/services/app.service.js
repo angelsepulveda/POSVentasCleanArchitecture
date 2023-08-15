@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const category_entity_1 = require("../../modules/warehouse/categories/infrastructure/category.entity");
+const brand_entity_1 = require("../../modules/warehouse/brands/infrastructure/database/brand.entity");
+const category_entity_1 = require("../../modules/warehouse/categories/infrastructure/database/category.entity");
 class AppService {
     static get PORT() {
         return parseInt(process.env.PORT) || 3000;
@@ -16,7 +17,7 @@ class AppService {
         return {
             host: process.env.DB_HOST || 'localhost',
             port: +process.env.DB_PORT || 3310,
-            entities: [category_entity_1.CategoryEntity],
+            entities: [category_entity_1.CategoryEntity, brand_entity_1.BrandEntity],
             //entities: [process.env.DB_ENTITIES || 'dist/**/*.entity.js'],
             username: process.env.DB_USER || 'user',
             password: pass || '12345',

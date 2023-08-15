@@ -1,11 +1,6 @@
 import { DTO } from '../../../../../shared/interfaces/dto.interface';
 import { CategoryProperties } from '../../../domain/types/categoryProperties.type';
-
-interface CategoryDTO {
-   name: string
-   description: string | null | undefined
-   id: string
-}
+import { CategoryDTO } from './category.dto';
 
 export type CategoryUpdaterDTO = CategoryDTO
 

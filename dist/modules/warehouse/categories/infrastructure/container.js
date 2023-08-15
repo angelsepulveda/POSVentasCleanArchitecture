@@ -15,7 +15,7 @@ const categoryDeleter_controller_1 = __importDefault(require("../interfaces/http
 const categoryFinder_controller_1 = __importDefault(require("../interfaces/http/controllers/categoryFinder.controller"));
 const categoryLister_controller_1 = __importDefault(require("../interfaces/http/controllers/categoryLister.controller"));
 const categoryUpdater_controller_1 = __importDefault(require("../interfaces/http/controllers/categoryUpdater.controller"));
-const categoryTypeORM_repository_1 = __importDefault(require("./categoryTypeORM.repository"));
+const categoryTypeORM_repository_1 = __importDefault(require("./database/categoryTypeORM.repository"));
 //registro de dependencias
 exports.CategoryContainer = new inversify_1.ContainerModule(bind => {
     bind('CategoryRepository').to(categoryTypeORM_repository_1.default);

@@ -8,6 +8,7 @@ import swaggerUi from 'swagger-ui-express';
 
 import HandlerErrors from './helpers/errors';
 import routerHealth from './helpers/health';
+import routerBrand from './modules/warehouse/brands/interfaces/http/router';
 import routerCategory from './modules/warehouse/categories/interfaces/http/router';
 
 class App {
@@ -47,6 +48,7 @@ class App {
 
    mountRoutes(): void {
       this.expressApp.use('/api/categories', routerCategory);
+      this.expressApp.use('/api/brands', routerBrand);
    }
    mounthErrors(): void{
       this.expressApp.use(HandlerErrors.notFound);

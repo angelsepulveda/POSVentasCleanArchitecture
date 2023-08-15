@@ -6,9 +6,9 @@ class CategoryListerMapping extends dto_interface_1.DTO {
     execute(data) {
         return data.map((category) => {
             return {
-                name: category.name.getValue(),
-                description: category.description.getValue(),
-                id: category.id.getValue(),
+                name: category.name.value,
+                description: category.description.value,
+                id: category.id.value,
             };
         });
     }

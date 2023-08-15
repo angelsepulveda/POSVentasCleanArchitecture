@@ -8,10 +8,10 @@ class Category {
     }
     toPrimitives() {
         return {
-            id: this.id.getValue(),
-            name: this.name.getValue(),
-            description: this.description.getValue(),
-            active: this.active.getValue()
+            id: this.id.value,
+            name: this.name.value,
+            description: this.description.value,
+            active: this.active.value
         };
     }
     properties() {

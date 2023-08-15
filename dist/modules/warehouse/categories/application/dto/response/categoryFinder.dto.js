@@ -5,9 +5,9 @@ const dto_interface_1 = require("../../../../../shared/interfaces/dto.interface"
 class CategoryFinderMapping extends dto_interface_1.DTO {
     execute(data) {
         return {
-            name: data.name.getValue(),
-            description: data.description.getValue(),
-            id: data.id.getValue(),
+            name: data.name.value,
+            description: data.description.value,
+            id: data.id.value,
         };
     }
 }

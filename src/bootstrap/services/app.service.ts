@@ -2,7 +2,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-import { CategoryEntity  } from '../../modules/warehouse/categories/infrastructure/category.entity';
+import { BrandEntity } from '../../modules/warehouse/brands/infrastructure/database/brand.entity';
+import { CategoryEntity  } from '../../modules/warehouse/categories/infrastructure/database/category.entity';
 
 
 export class AppService {
@@ -15,7 +16,7 @@ export class AppService {
       return {
          host: process.env.DB_HOST || 'localhost',
          port: +process.env.DB_PORT || 3310,
-         entities: [CategoryEntity],
+         entities: [CategoryEntity, BrandEntity],
          //entities: [process.env.DB_ENTITIES || 'dist/**/*.entity.js'],
          username: process.env.DB_USER || 'user',
          password: pass || '12345',

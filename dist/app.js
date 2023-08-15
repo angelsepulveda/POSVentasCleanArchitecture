@@ -12,7 +12,8 @@ const swagger_jsdoc_1 = __importDefault(require("swagger-jsdoc"));
 const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 const errors_1 = __importDefault(require("./helpers/errors"));
 const health_1 = __importDefault(require("./helpers/health"));
-const router_1 = __importDefault(require("./modules/warehouse/categories/interfaces/http/router"));
+const router_1 = __importDefault(require("./modules/warehouse/brands/interfaces/http/router"));
+const router_2 = __importDefault(require("./modules/warehouse/categories/interfaces/http/router"));
 class App {
     constructor() {
         this.expressApp = (0, express_1.default)();
@@ -41,7 +42,8 @@ class App {
         this.expressApp.use(express_1.default.urlencoded({ extended: true }));
     }
     mountRoutes() {
-        this.expressApp.use('/api/categories', router_1.default);
+        this.expressApp.use('/api/categories', router_2.default);
+        this.expressApp.use('/api/brands', router_1.default);
     }
     mounthErrors() {
         this.expressApp.use(errors_1.default.notFound);

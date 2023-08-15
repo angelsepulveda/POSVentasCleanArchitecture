@@ -11,7 +11,7 @@ import CategoryDeleterController from '../interfaces/http/controllers/categoryDe
 import CategoryFinderController from '../interfaces/http/controllers/categoryFinder.controller';
 import CategoryListerController from '../interfaces/http/controllers/categoryLister.controller';
 import CategoryUpdaterController from '../interfaces/http/controllers/categoryUpdater.controller';
-import CategoryTypeORMRepository from './categoryTypeORM.repository';
+import CategoryTypeORMRepository from './database/categoryTypeORM.repository';
 
 //registro de dependencias
 export const CategoryContainer = new ContainerModule(bind => {

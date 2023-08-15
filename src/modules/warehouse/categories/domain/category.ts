@@ -1,5 +1,5 @@
 import { IEntity } from '../../../shared/domain/interfaces/entity.interface';
-import { CategoryPrimitive } from './types/CategoryPrimitive.type';
+import { CategoryPrimitive } from './types/categoryPrimitive.type';
 import { CategoryProperties } from './types/categoryProperties.type';
 import { CategoryUpdate } from './types/categoryUpdate.type';
 import { CategoryActive } from './value-objects/categoryActive.vo';
